@@ -22,7 +22,8 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone.match(/[0-9]{10}/) != nil
+  num_arr = phone.scan(/[0-9]/)
+  if num_arr.size == 10
     return true
   end
   return false
